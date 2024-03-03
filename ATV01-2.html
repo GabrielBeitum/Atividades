@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css" type="text/css">
+    <title>Atividade 1</title>
+</head>
+<body>
+    <h2>Insira Novo Dado:</h2>
+    <form id="formulario">
+        <label for="novoDado">Novo Dado:</label>
+        <input type="text" id="novoDado" required>
+        <button type="button" onclick="inserirDado()">Inserir</button>
+    </form>
+
+    <h2>Todos os Dados Cadastrados em Ordem Alfabética:</h2>
+    <div id="listaDados"></div>
+
+    <script>
+        var dados = [];
+
+        // Função para inserir novo dado
+        function inserirDado() {
+            var novoDadoInput = document.getElementById("novoDado");
+            var novoDado = novoDadoInput.value.trim();
+
+            
+            if (novoDado !== "") {
+                dados.push(novoDado);
+
+                // Ordena o array em ordem alfabética
+                dados.sort();                
+                exibirTodosDados();              
+                novoDadoInput.value = "";
+            }
+        }
+
+        // Função para exibir todos os dados em uma linha
+        function exibirTodosDados() {
+            var listaDados = document.getElementById("listaDados");
+
+            // Cria uma string contendo todos os dados
+            var dadosString = dados.join(", ");
+
+            // Adiciona a string como texto do elemento
+            listaDados.textContent = dadosString;
+        }
+    </script>
+    <h1>Atividade 1</h1>
+    <ol>
+        <li><a href="Semana2.html">Voltar</a></li>
+    </ol>
+</body>
+</html>
