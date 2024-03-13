@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATV01-3</title>
+  </head>
+  <body>
+    <script>
+      const dataAtual = new Date();
+
+      const dia = dataAtual.getDate();
+      const mes = dataAtual.getMonth() + 1;
+      const ano = dataAtual.getFullYear();
+
+      const diaDaSemana = dataAtual.getDay();
+      function obterDiaDaSemanaPorExtenso(diaDaSemana) {
+        const diasDaSemana = [
+          "Domingo",
+          "Segunda-feira",
+          "Terça-feira",
+          "Quarta-feira",
+          "Quinta-feira",
+          "Sexta-feira",
+          "Sábado",
+        ];
+        return diasDaSemana[diaDaSemana];
+      }
+      const diaDaSemanaFormatado = obterDiaDaSemanaPorExtenso(diaDaSemana);
+      console.log(
+        diaDaSemanaFormatado + "," + dia + " de " + mes + " de " + ano
+      );
+      
+    </script>
+    <h1>Atividade 1</h1>
+    <ol>
+        <li><a href="Semana3.html">Voltar</a></li>
+    </ol>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATV03</title>
+  </head>
+  <body>
+    <script>
+     
+      function limparFrase(frase) {
+        return frase.toLowerCase().replace(/[^a-zA-Z0-9]/g, "");//Replace(), foi utilizado pesquisas, pois n conhecia ainda.
+      }
+
+      
+      function verificarPalindromo(frase) {
+        const fraseLimpa = limparFrase(frase);
+        const fraseReversa = fraseLimpa.split("").reverse().join("");//as Ações de split e reverse foram usadas pesquisas também.
+        return fraseLimpa === fraseReversa;
+      }
+
+      
+      const frase = prompt("Digite uma frase:");
+
+      
+      if (verificarPalindromo(frase)) {
+        console.log("A frase é um palíndromo.");
+      } else {
+        console.log("A frase não é um palíndromo.");
+      }
+    </script>
+    <h1>Atividade 1</h1>
+    <ol>
+        <li><a href="Semana3.html">Voltar</a></li>
+    </ol>
+  </body>
+</html>

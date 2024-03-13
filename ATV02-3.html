@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ATV02</title>
+  </head>
+  <body>
+    <script>
+      let segundo = 0;
+      let minuto = 0;
+      let hora = 0;
+
+      function acrescer() {
+        function formatarNumero(numero) {
+          return numero < 10 ? "0" + numero : numero;
+        }
+        segundo += 1;
+        if (segundo == 60) {
+          minuto += 1;
+          segundo = 0;
+          if (minuto == 60) {
+            hora += 1;
+            minuto = 0;
+            if (hora == 24) {
+              hora = 0;
+            }
+          }
+        }
+        console.log(
+          formatarNumero(hora) +
+            ":" +
+            formatarNumero(minuto) +
+            ":" +
+            formatarNumero(segundo)
+        );
+
+        setTimeout(acrescer, 1000);
+      }
+      acrescer();
+    </script>
+    <h1>Atividade 1</h1>
+    <ol>
+        <li><a href="Semana3.html">Voltar</a></li>
+    </ol>
+  </body>
+</html>
